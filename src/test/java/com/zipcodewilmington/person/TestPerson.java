@@ -95,4 +95,56 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    Person person = new Person();
+    //Test Gets and Sets
+    @Test
+    public void testSetStreetNumber() {
+        int expected = 42;
+
+        person.setStreetNumber(expected);
+
+        int actual = person.getStreetNumber();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetStreet() {
+        String expected = "Baker St";
+
+        person.setStreet(expected);
+
+        String actual = person.getStreet();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetState() {
+        String expected = "MT";
+
+        person.setState(expected);
+
+        String actual = person.getState();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetPostalCode() {
+        int expected = 96860;
+
+        person.setPostalCode(expected);
+
+        int actual = person.getPostalCode();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetPhNum() {
+        String expected = "4065552207";
+
+        person.setPhNum(expected);
+
+        String actual = person.getPhNum();
+        Assert.assertEquals(expected, actual);
+    }
 }

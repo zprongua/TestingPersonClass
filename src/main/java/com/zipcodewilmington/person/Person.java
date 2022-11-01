@@ -6,36 +6,37 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name = "";
     private int age = Integer.MAX_VALUE;
+    private int streetNumber;
+    private String street;
+    private String state;
+    private int postalCode;
+    private String phNum;
+
 
     public Person() {
     }
 
-    //can't use same variable as class field, personally would rather change incoming var then name inside class
-    //public Person(int age) {}
-    public Person(int newAge) {
-        age = newAge;
+    public Person(int age) {
+        this.age = age;
+     }
+
+    public Person(String name) {
+        this.name = name;
     }
 
-    //can't use same variable as class field
-    //public Person(String name) {}
-    public Person(String newName) {
-        name = newName;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-    //can't use same variable as class field
-    //public Person(String name, int age) {}
-    public Person(String newName, int newAge) {
-        name = newName;
-        age = newAge;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    //can't use same variable as class field
-    //public void setName(String name) {}
-    public void setName(String newName) { name = newName; }
-
-    //can't use same variable as class field
-    //public void setAge(int age) {}
-    public void setAge(int newAge) { age = newAge; }
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public String getName() {
         return name;
@@ -43,5 +44,47 @@ public class Person {
 
     public Integer getAge() {
         return age;
+    }
+
+    //Sets
+    public void setStreetNumber(int streetNumber) {
+        this.streetNumber = streetNumber;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setPostalCode(int postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public void setPhNum(String phNum) {
+        this.phNum = phNum;
+    }
+
+    //Gets
+    public int getStreetNumber() {
+        return streetNumber;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public int getPostalCode() {
+        return postalCode;
+    }
+
+    public String getPhNum() {
+        return phNum;
     }
 }
