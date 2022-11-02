@@ -4,8 +4,8 @@ package com.zipcodewilmington.person;
  * Created by leon on 2/12/18.
  */
 public class Person {
-    private String name = "";
-    private int age = Integer.MAX_VALUE;
+    private String name;
+    private int age;
     private int streetNumber;
     private String street;
     private String state;
@@ -14,14 +14,16 @@ public class Person {
 
 
     public Person() {
+        this("", Integer.MAX_VALUE);
     }
 
     public Person(int age) {
-        this.age = age;
+        this("", age);
      }
 
     public Person(String name) {
-        this.name = name;
+
+        this(name, Integer.MAX_VALUE);
     }
 
     public Person(String name, int age) {
